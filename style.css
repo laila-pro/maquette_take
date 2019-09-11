@@ -1,0 +1,37 @@
+.header{
+  background:url(img/paysage.jpg) no-repeat center center;
+	padding:55px 0 380px;
+	text-align:left;
+	background-size:cover;
+
+}
+.projects{
+  background-color: #FF915E;
+}
+.second-box{
+  background-color: #E0594A;
+}
+.patchwork{
+  border: 1px dotted black;
+}
+.design{
+  background-color: #F0633E;
+}
+.built{
+  background-color: #8A6676;
+}
+.clients{
+  background-image: url(img/1.png);
+}
+.great{
+  background-color: #D38EA5;
+}
+.sign_up{
+  background-image: url(img/2.jpg);
+}
+.pictures{
+  background-color: #009B38;
+}
+.something_new{
+  background-image: url(img/3.jpg);
+}
