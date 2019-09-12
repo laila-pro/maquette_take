@@ -13,10 +13,6 @@ body {
   background-color: #FFF;
 }
 
-.second-box {
-  background-color: #E0594A;
-}
-
 .patchwork {
   /* border: 1px dotted black; */
 }
@@ -87,4 +83,52 @@ body {
   background-color: rgba(255, 255, 255, 1);
   color:rgba(0, 0, 0, 1);
   border: 0;
+}
+
+.details h2{
+  font-family: 'Roboto', sans-serif;
+
+}
+.text-secondary{
+  color: #979595;
+}
+
+/*second-box*/
+.second-box{
+  background-image: url(img/voiture.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.information{
+  background-color: #82ca9c;
+  height: 30em;
+}
+.web_based p, .team p, .support p {
+  font-size: 0.8em;
+}
+
+/*footer*/
+.end{
+  background-color: #192431;
+  height: 30em;
+  display: flex;
+}
+
+.get_in_touch h4{
+  font-weight: 600;
+  font-size: 1em;
+}
+.contents{
+  color: white;
+}
+h5{
+  font-weight: 600;
+  font-size: 1em;
+}
+.spam_info{
+  font-size: 0.8em;
+}
+.inputGroupPrepend2{
+  background-color: #82ca9c !important;
 }
