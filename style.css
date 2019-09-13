@@ -7,6 +7,8 @@ body {
   padding: 55px 0 380px;
   text-align: left;
   background-size: cover;
+  background-attachment: fixed;
+
 }
 
 .projects {
