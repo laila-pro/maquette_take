@@ -8,7 +8,6 @@ body {
   text-align: left;
   background-size: cover;
   background-attachment: fixed;
-
 }
 
 .projects {
@@ -87,7 +86,6 @@ body {
   border: 0;
 }
 
-<<<<<<< Updated upstream
 .details h2{
   font-family: 'Roboto', sans-serif;
 
@@ -99,7 +97,16 @@ body {
 /*second-box*/
 .second-box{
   background-image: url(img/voiture.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position:relative
 }
+
+#bottom-position{
+  position:absolute;
+  bottom:8rem;
+}
+
 .information{
   background-color: #82ca9c;
   height: 30em;
