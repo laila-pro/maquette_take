@@ -94,6 +94,20 @@ body {
   color: #979595;
 }
 
+.purple-bg{
+  text-transform: uppercase;
+padding: 0px 15px;
+border-radius: 4px;
+background: #e1e1e1;
+font-size: 11px;
+display: inline-block;
+color: #fff;
+font-weight: 700;
+}
+.purple-bg:hover{
+background: #bb8dc2 !important;
+}
+
 /*second-box*/
 .second-box{
   background-image: url(img/voiture.jpg);
@@ -170,4 +184,15 @@ h5{
 }
 .btn btn-outline-secondary{
   background-color: #82ca9c !important;
+}
+
+#button-addon2 {
+    width: 4rem;
+    padding: 0.2rem;
+    text-align: center;
+    color: #fff;
+    background: #82ca9c;
+    display: inline-block;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
