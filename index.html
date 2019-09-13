@@ -8,6 +8,7 @@
   <title>TAKE</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="icon" type="image/png" href="img/logo.png">
   <!--googlefont-->
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -150,41 +151,46 @@
     </article>
   </section>
 
+  <!-- Anto Products col-->
   <section class="products">
-    <div class="row">
-      <div class="col-lg-6 col-sm-6 col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Go it solo</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-            <a href="#" class="btn btn-primary">Buy now $18</a>
+    <div class="container">
+      <div class="row cardsp">
+        <div class="col-6">
+          <div class="nocolor">
+            <span>Legacy</span>
+            <h2 class="solo1">Go it solo</h2>
+            <p class="solo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+            <button type="button" id="gbut" class="btn btn-success">Buy now $18</button>
+
+
           </div>
         </div>
-      </div>
-      <div class="col-lg-6 col-sm-6 col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Team Plan</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-            <a href="#" class="btn btn-primary">Buy now $18</a>
+        <div class="col-6">
+          <div class="nocolor">
+            <span>Most Popular</span>
+            <h2 class="solo1">Team Plan</h2>
+            <p class="solo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+            <button type="button" id="gbut" class="btn btn-success">Buy now $18</button>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <!--FOOTER -->
   <footer class="end">
     <div class="blabla container">
-      <div class="row d-flex align-items-center">
-        <div class="left col-md-6">
-          <div class="get_in_touch text-white">
-            <h4>Get in touch</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="row d-flex pt-5">
+        <div class="left col-md-6 pb-5 pl-2">
+          <div class="get_in_touch text-white align-items-center pt-5">
+            <h4 class="pb-4">Get in touch</h4>
+            <p class="font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat.</p>
           </div>
-          <div class="us row">
+          <div class="us row pt-4">
             <aside class="resources text-white col-md-4">
               <h5>Resources</h5>
-              <div class="contents">
+              <div class="contents pt-3 d-flex flex-column">
                 <a href="#" class="text-white">Tour</a>
                 <a href="#" class="text-white">Customers</a>
                 <a href="#" class="text-white">Pricing and Plans</a>
@@ -195,7 +201,7 @@
             </aside>
             <aside class="features text-white col-md-4">
               <h5>Features</h5>
-              <div class="contents">
+              <div class="contents pt-3 d-flex flex-column">
                 <a href="#" class="text-white">Tour</a>
                 <a href="#" class="text-white">Customers</a>
                 <a href="#" class="text-white">Pricing and Plans</a>
@@ -205,7 +211,7 @@
             </aside>
             <aside class="how_to text-white col-md-4">
               <h5>How To's</h5>
-              <div class="contents">
+              <div class="contents pt-3 d-flex flex-column">
                 <a href="#" class="text-white">Tour</a>
                 <a href="#" class="text-white">Customers</a>
                 <a href="#" class="text-white">Pricing and Plans</a>
@@ -216,34 +222,25 @@
           </div>
         </div>
 
-        <div class="right col-md-6">
-          <div class="form">
-            <h4 class="text-white">Stay in touch</h4>
-            <div class="input-group">
-              <input type="text" class="form-control form-control-lg" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupPrepend2"><i class="fas fa-check text-white"></i></span>
+        <div class="right col-sm-12 col-md-6">
+          <div class="form pt-5">
+            <h4 class="text-white pb-4">Stay in touch</h4>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="username" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-light" type="button" id="button-addon2"><i class="fas fa-check text-white"></i></button>
               </div>
             </div>
             <p class="spam_info text-secondary">We don't send spam. Actually, who are we kiding, we'll spam the shit out of your inbox</p>
           </div>
 
-          <div class="made_by text-white">
+          <div class="made_by text-white pt-5">
             <p>Free Template by FreeTemplates.pro</p>
           </div>
         </div>
       </div>
-
-
-
     </div>
-
-
-  </div>
-
   </footer>
-
-  <!-- testest -->
 
 
 
