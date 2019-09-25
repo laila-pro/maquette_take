@@ -18,16 +18,26 @@ try {
    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    // echo "Connected successfully";
 
+echo "<div class='container'>
+  <div class='row'>";
+
      $sql =  'SELECT * FROM `article` ORDER BY `publicationDate` DESC';
-<div class='container'>
-     foreach  ($conn->query($sql) as $row) {
-         print "<div class='card' style='width: 18rem;'>
-          <img src='".$row['image']."'class='card-img-top' alt='...'>
-          <div class='card-body'>
-          <h5 class='card-title'>" . $row['titre'] . "</h5><p class='card-text'>". $row['contenu']."</p></div></div>";
+
+      foreach  ($conn->query($sql) as $row) {
+        print "
+            <div class='card col-md-3 m-3 pt-3' style='width: 18rem;'>
+              <img src='".$row['image']."'class='card-img-top' alt='...'>
+              <div class='card-body'>
+                <h5 class='card-title'>" . $row['titre'] . "</h5>
+                <p class='card-text'>". $row['contenu']."</p>
+                <p class='card-text'><small class='text-muted'>". $row['publicationDate'] . "</small></p>
+              </div>
+            </div>
+        ";
 
      }
-
+echo "</div>
+</div>";
    }
 catch(PDOException $e)
    {
