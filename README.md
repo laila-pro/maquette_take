@@ -1,5 +1,5 @@
-## Intégration de la maquette *Take*
+## Création d'un back office en utilisant PHP et MySQL
 
-Intégration d'une maquette au format psd en html/css/js
+Création d'un CMS pour alimenter une maquette intégrée au format html/css/js
 
 ![](http://blazrobar.com/wp-content/uploads/2016/01/free-psd-templates-photoshop-full-pixels.jpg)
