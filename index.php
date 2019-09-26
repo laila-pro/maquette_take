@@ -173,25 +173,23 @@
   <!-- Anto Products col-->
   <section class="products">
     <div class="container">
-      <div class="row cardsp">
-        <div class="col-6">
-          <div class="nocolor">
-            <span class="purple-bg">Legacy</span>
-            <h2 class="solo1">Go it solo</h2>
-            <p class="solo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-            <button type="button" id="gbut" class="btn btn-success">Buy now $18</button>
+      <div class="row cardsp p-5">
+        <?php
+          $product =  'SELECT * FROM `voyage` ORDER BY `ID_voyage` DESC LIMIT 2';
 
+          foreach  ($conn->query($product) as $row) {
+            print "
+              <div class='nocolor col-5 m-4'>
 
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="nocolor">
-            <span class="purple-bg">Most Popular</span>
-            <h2 class="solo1">Team Plan</h2>
-            <p class="solo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-            <button type="button" id="gbut" class="btn btn-success">Buy now $18</button>
-          </div>
-        </div>
+                  <span class='purple-bg'>" . $row['tag'] . "</span>
+                  <h2 class='solo1'>". $row['titre']."</h2>
+                  <p class='solo2'>". $row['contenu'] . "</p>
+                  <button type='button' id='gbut' class='btn btn-success'>Buy now $".$row['prix'] . "</button>
+
+              </div>
+             ";
+          };
+        ?>
       </div>
     </div>
   </section>

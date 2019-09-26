@@ -139,12 +139,14 @@ body {
 }
 
 /*  Products */
-.cardsp {
-  padding-top: 120px;
-}
 
-.products {
-  height: 590px;
+/* .cardsp
+{
+  padding-top: 120px;
+  padding-bottom: 120px;
+} */
+.products
+{
   background-color: #F6F7FA;
 }
 
