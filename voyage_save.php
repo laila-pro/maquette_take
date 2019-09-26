@@ -13,4 +13,5 @@ echo $sql;
 $conn->exec($sql);
 
 echo "New record created successfully";
+header("Location: voyage_add.php"); /* Redirection du navigateur */
 ?>
