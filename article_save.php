@@ -1,15 +1,14 @@
 <?php
 require 'connexion.php';
 $tab = array(
-':titre' => $_POST['titre'],
-':contenu' => $_POST['contenu'],);
-
+'titre' => $_POST['titre'],
+'contenu' => $_POST['contenu'],
+'image'=>$_POST['filepond']);
 //création de la requête SQL:
 
-$sql = "INSERT INTO `article` (titre, contenu)
- VALUES (:titre, :contenu,)";
+$sql = 'INSERT INTO `article` (`titre`, `contenu`, `image`, `auteur`, `date`) VALUES ("'.$tab["contenu"].'", "'.$tab["titre"].'","'.$tab["image"].'","test",CURDATE());';
 
-echo "$sql";
+echo $sql;
 $conn->exec($sql);
 
 echo "New record created successfully";

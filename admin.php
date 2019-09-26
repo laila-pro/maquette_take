@@ -6,7 +6,7 @@ require 'header.php';?>
 </div>
 <div class="col-9">
 <?php if (isset($_GET['voir']))
-require 'article.php';
+require 'article_add.php';
 ?>
 </div>
 </div>
