@@ -1,8 +1,5 @@
   <h1> Ajouter un article </h1>
   <form class="was-validated" action="article_save.php" method="post">
-
-    <h1> Ajouter un article </h1>
-  <form class="was-validated" action="connexion.php" method="post">
       <div class="col-md-4 mb-3">
       <label for="validationTooltip01">Titre Article</label>
       <input type="text" class="form-control" name="titre" id="validationTooltip01" placeholder="Titre article" value="" required>
