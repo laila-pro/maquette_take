@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="author" lang="fr" content="Solange Harmonie PICARD, Antoni SALOMON">
+  <meta name="author" lang="fr" content="Solange Harmonie PICARD, Antoni SALOMON, Laila Provost, Sylvain Espina, Erwann Le Gall">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TAKE</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -36,11 +36,22 @@
 
 <body>
   <header class="header min-vh-100">
-    <div class="container logo">
-      <a href="#">
-        <img src="img/logo.png" alt="">
-      </a>
+    <div class="container">
+      <div class="row">
+        <div class="logo col-auto mr-auto">
+          <a href="#">
+            <img src="img/logo.png" alt="">
+          </a>
+        </div>
+        <div class="login col-auto">
+          <a href="login.php">
+            <button type="button" class="btn btn-outline-info">Log In</button>
+          </a>
+        </div>
+      </div>
     </div>
+
+
     <div class="container title text-white" id="titlepic">
       <h1 id="picperf">Picture perfect</h1>
       <p id="pictext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -122,16 +133,20 @@
           $sql =  'SELECT * FROM `article` ORDER BY `ID_ARTICLE` DESC LIMIT 4';
 
           foreach  ($conn->query($sql) as $row) {
+            $exerpt = substr($row['contenu'], 0, 200). " ...";
              print "
-                 <div class='card web col-md-3 pt-3' style='width: 18rem;'>
-                   <img src='".$row['image']."'class='card-img-top' alt='...'>
-                   <div class='card-body'>
-                     <h5 class='card-title'>" . $row['titre'] . "</h5>
-                     <p class='card-text'>". $row['contenu']."</p>
-                     <p class='card-text'><small class='text-muted'>". $row['auteur'] . "</small></p>
-                   </div>
-                 </div>
-             ";
+                <div class='card web col-md-3 pt-3' style='width: 18rem;'>
+                  <a href='article.php?id=" . $row['ID_article'] . "'>
+                    <img src='".$row['image']."'class='card-img-top' alt='...'>
+                  </a>
+                  <div class='card-body'>
+                   <h5 class='card-title'>" . $row['titre'] . "</h5>
+                   <p class='card-text'>". $exerpt."</p>
+                   <p class='card-text'><small class='text-muted'>". $row['auteur'] . "</small></p>
+                  </div>
+                </div>
+
+            ";
           }
         ?>
       </div>
