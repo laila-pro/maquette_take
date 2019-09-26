@@ -2,8 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Takes</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   </head>
   <body>
 <?php
@@ -21,11 +22,11 @@ try {
 echo "<div class='container'>
   <div class='row'>";
 
-     $sql =  'SELECT * FROM `article` ORDER BY `publicationDate` DESC';
+     $sql =  'SELECT * FROM `article` ORDER BY `publicationDate` DESC LIMIT 4';
 
       foreach  ($conn->query($sql) as $row) {
         print "
-            <div class='card col-md-3 m-3 pt-3' style='width: 18rem;'>
+            <div class='card col-3 m-3 pt-3' style='width: 18rem;'>
               <img src='".$row['image']."'class='card-img-top' alt='...'>
               <div class='card-body'>
                 <h5 class='card-title'>" . $row['titre'] . "</h5>
@@ -34,7 +35,6 @@ echo "<div class='container'>
               </div>
             </div>
         ";
-
      }
 echo "</div>
 </div>";
