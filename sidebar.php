@@ -29,7 +29,7 @@
               <a href="#voyageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Voyage</a>
               <ul class="collapse list-unstyled" id="voyageSubmenu">
                 <li>
-                  <a href="#">Ajouter</a>
+                  <a href="admin.php?trip=1">Ajouter</a>
                 </li>
                 <li>
                   <a href="#">Modifier</a>
