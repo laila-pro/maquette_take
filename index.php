@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="author" lang="fr" content="Solange Harmonie PICARD, Antoni SALOMON">
+  <meta name="author" lang="fr" content="Solange Harmonie PICARD, Antoni SALOMON, Laila Provost, Sylvain Espina, Erwann Le Gall">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TAKE</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -36,11 +36,22 @@
 
 <body>
   <header class="header min-vh-100">
-    <div class="container logo">
-      <a href="#">
-        <img src="img/logo.png" alt="">
-      </a>
+    <div class="container">
+      <div class="row">
+        <div class="logo col-auto mr-auto">
+          <a href="#">
+            <img src="img/logo.png" alt="">
+          </a>
+        </div>
+        <div class="login col-auto">
+          <a href="login.php">
+            <button type="button" class="btn btn-outline-info">Log In</button>
+          </a>
+        </div>
+      </div>
     </div>
+
+
     <div class="container title text-white" id="titlepic">
       <h1 id="picperf">Picture perfect</h1>
       <p id="pictext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -122,16 +133,20 @@
           $sql =  'SELECT * FROM `article` ORDER BY `ID_ARTICLE` DESC LIMIT 4';
 
           foreach  ($conn->query($sql) as $row) {
+            $exerpt = substr($row['contenu'], 0, 200). " ...";
              print "
-                 <div class='card web col-md-3 pt-3' style='width: 18rem;'>
-                   <img src='".$row['image']."'class='card-img-top' alt='...'>
-                   <div class='card-body'>
-                     <h5 class='card-title'>" . $row['titre'] . "</h5>
-                     <p class='card-text'>". $row['contenu']."</p>
-                     <p class='card-text'><small class='text-muted'>". $row['auteur'] . "</small></p>
-                   </div>
-                 </div>
-             ";
+                <div class='card web col-md-3 pt-3' style='width: 18rem;'>
+                  <a href='article.php?id=" . $row['ID_article'] . "'>
+                    <img src='".$row['image']."'class='card-img-top' alt='...'>
+                  </a>
+                  <div class='card-body'>
+                   <h5 class='card-title'>" . $row['titre'] . "</h5>
+                   <p class='card-text'>". $exerpt."</p>
+                   <p class='card-text'><small class='text-muted'>". $row['auteur'] . "</small></p>
+                  </div>
+                </div>
+
+            ";
           }
         ?>
       </div>
@@ -142,7 +157,7 @@
     <article class="container d-flex flex-column align-content-center">
       <div class="row flex-grow-1 d-flex align-items-end">
         <div class="col-12 col-md-4" id="bottom-position">
-p          <h2 class="text-white display-4">More power <br> behind every pixel.</h2>
+          <h2 class="text-white display-4">More power <br> behind every pixel.</h2>
           <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <button type="button" class="btn btn-primary custom-btn btn-sm">Find Out More &rarr;</button>
         </div>
@@ -173,25 +188,23 @@ p          <h2 class="text-white display-4">More power <br> behind every pixel.<
   <!-- Anto Products col-->
   <section class="products">
     <div class="container">
-      <div class="row cardsp">
-        <div class="col-6">
-          <div class="nocolor">
-            <span class="purple-bg">Legacy</span>
-            <h2 class="solo1">Go it solo</h2>
-            <p class="solo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-            <button type="button" id="gbut" class="btn btn-success">Buy now $18</button>
+      <div class="row cardsp p-5">
+        <?php
+          $product =  'SELECT * FROM `voyage` ORDER BY `ID_voyage` DESC LIMIT 2';
 
+          foreach  ($conn->query($product) as $row) {
+            print "
+              <div class='nocolor col-5 m-4'>
 
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="nocolor">
-            <span class="purple-bg">Most Popular</span>
-            <h2 class="solo1">Team Plan</h2>
-            <p class="solo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-            <button type="button" id="gbut" class="btn btn-success">Buy now $18</button>
-          </div>
-        </div>
+                  <span class='purple-bg'>" . $row['tag'] . "</span>
+                  <h2 class='solo1'>". $row['titre']."</h2>
+                  <p class='solo2'>". $row['contenu'] . "</p>
+                  <button type='button' id='gbut' class='btn btn-success'>Buy now $".$row['prix'] . "</button>
+
+              </div>
+             ";
+          };
+        ?>
       </div>
     </div>
   </section>

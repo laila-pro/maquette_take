@@ -23,7 +23,19 @@
         default:
         break;
         }
-        }
+      }else if (isset($_GET['trip'])){
+        switch ($_GET['trip']){
+          case 1:
+          require 'voyage_add.php';
+          break;
+          case 0:
+          echo "Article ajouté avec succès";
+          break;
+
+          default:
+          break;
+          }
+      }
 
     ?>
   </div>
