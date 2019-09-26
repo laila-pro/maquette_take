@@ -1,6 +1,4 @@
-
-
-  <h1> Ajouter un article </h1>
+<h1> Ajouter un article </h1>
   <form class="was-validated" action="connexion.php" method="post">
       <div class="col-md-4 mb-3">
       <label for="validationTooltip01">Titre Article</label>
