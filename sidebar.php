@@ -18,7 +18,7 @@
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ARTICLE</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
-                        <a href="article.php">Ajouter</a>
+                        <a href="admin.php?voir=1">Ajouter</a>
                     </li>
                     <li>
                         <a href="#">Modifier</a>
