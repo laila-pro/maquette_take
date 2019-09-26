@@ -142,7 +142,7 @@
     <article class="container d-flex flex-column align-content-center">
       <div class="row flex-grow-1 d-flex align-items-end">
         <div class="col-12 col-md-4" id="bottom-position">
-p          <h2 class="text-white display-4">More power <br> behind every pixel.</h2>
+          <h2 class="text-white display-4">More power <br> behind every pixel.</h2>
           <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <button type="button" class="btn btn-primary custom-btn btn-sm">Find Out More &rarr;</button>
         </div>
