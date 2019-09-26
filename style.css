@@ -139,13 +139,13 @@ background: #BB8DC2 !important;
 
 /*  Products */
 
-.cardsp
+/* .cardsp
 {
   padding-top: 120px;
-}
+  padding-bottom: 120px;
+} */
 .products
 {
-  height: 590px;
   background-color: #F6F7FA;
 }
 .nocolor

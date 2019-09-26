@@ -173,20 +173,20 @@
   <!-- Anto Products col-->
   <section class="products">
     <div class="container">
-      <div class="row cardsp">
+      <div class="row cardsp p-5">
         <?php
           $product =  'SELECT * FROM `voyage` ORDER BY `ID_voyage` DESC LIMIT 2';
 
           foreach  ($conn->query($product) as $row) {
-             print "<div class='col-6'>
-                    <div class='nocolor'>
+            print "
+              <div class='nocolor col-5 m-4'>
 
-                     <span class='purple-bg'>" . $row['tag'] . "</span>
-                     <h2 class='solo1'>". $row['titre']."</h2>
-                     <p class='solo2'>". $row['contenu'] . "</p>
-                     <button type='button' id='gbut' class='btn btn-success'>Buy now $".$row['prix'] . "</button>
-                   </div>
-                 </div>
+                  <span class='purple-bg'>" . $row['tag'] . "</span>
+                  <h2 class='solo1'>". $row['titre']."</h2>
+                  <p class='solo2'>". $row['contenu'] . "</p>
+                  <button type='button' id='gbut' class='btn btn-success'>Buy now $".$row['prix'] . "</button>
+
+              </div>
              ";
           };
         ?>
