@@ -14,13 +14,16 @@
               <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ARTICLE</a>
               <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
-                  <a href="admin.php?voir=1">Ajouter</a>
+                  <a href="admin.php?choix=1">Ajouter</a>
                 </li>
                 <li>
-                  <a href="#">Modifier</a>
+                  <a href="admin.php?choix=2">Modifier</a>
                 </li>
                 <li>
-                  <a href="#">Supprimer</a>
+                  <a href="admin.php?choix=3">Supprimer</a>
+                </li>
+                <li>
+                  <a href="admin.php?choix=4">Consultation</a>
                 </li>
               </ul>
             </li>
