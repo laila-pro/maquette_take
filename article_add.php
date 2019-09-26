@@ -1,12 +1,8 @@
-<<<<<<< HEAD:article_add.php
-
-
   <h1> Ajouter un article </h1>
   <form class="was-validated" action="article_save.php" method="post">
-=======
-<h1> Ajouter un article </h1>
+
+    <h1> Ajouter un article </h1>
   <form class="was-validated" action="connexion.php" method="post">
->>>>>>> 28066ce3ddf89f74adff40a5561d483e2d29ab84:article.php
       <div class="col-md-4 mb-3">
       <label for="validationTooltip01">Titre Article</label>
       <input type="text" class="form-control" name="titre" id="validationTooltip01" placeholder="Titre article" value="" required>
@@ -18,7 +14,7 @@
     <label for="validationTextarea">Contenu de l'article</label>
     <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" name="contenu" required></textarea>
     <div class="invalid-feedback">
-      Please enter a message in the textarea.
+      Invalide.
     </div>
   </div>
 
