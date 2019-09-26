@@ -14,7 +14,7 @@
     <label for="validationTextarea">Contenu de l'article</label>
     <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" name="contenu" required></textarea>
     <div class="invalid-feedback">
-      Invalide.
+      Please enter a message in the textarea.
     </div>
   </div>
 
