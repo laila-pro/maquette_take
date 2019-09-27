@@ -6,14 +6,14 @@
       <label for="validationTooltip01">Titre Article</label>
       <input type="text" class="form-control" name="titre" id="validationTooltip01" placeholder="Titre article" value="" required>
       <div class="valid-tooltip">
-        Looks good!
+      Excellent!
       </div>
     </div>
   <div class="mb-3">
     <label for="validationTextarea">Contenu de l'article</label>
     <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" name="contenu" required></textarea>
     <div class="invalid-feedback">
-      Please enter a message in the textarea.
+      Veuillez saisir l'article
     </div>
   </div>
 

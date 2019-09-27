@@ -18,7 +18,7 @@
         echo "Article ajouté avec succès";
         break;
         case 3:
-        require 'article_alter.php';
+        require 'article_edit.php';
 
         default:
         break;
