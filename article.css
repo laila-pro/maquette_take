@@ -4,7 +4,7 @@ body{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-
+    font-family: 'Open Sans', sans-serif;
 }
 
 .article {

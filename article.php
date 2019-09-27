@@ -69,7 +69,7 @@
                       </div>
                     </div>
                     <div class='row'>
-                      <p class='p-2'>". $row['contenu'] ."</p>
+                      <p class='px-3'>". $row['contenu'] ."</p>
                     </div>
                  </div>
               ";
