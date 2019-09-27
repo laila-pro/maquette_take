@@ -42,26 +42,36 @@
               <img src="img/logo.png" alt="">
             </a>
           </div>
+          <div class="login col-auto">
+            <a href="login.php">
+              <button type="button" class="btn btn-outline-info">Log In</button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="container">
-      <div class="row">
-        <div class="article col-9 text-center">
+      <div class="row justify-content-md-center">
+        <div class="article col p-5 my-5">
           <?php
             $sql =  'SELECT * FROM `article` WHERE `ID_article`='.$_GET["id"];
             foreach  ($conn->query($sql) as $row) {
-              $exerpt = substr($row['contenu'], 0, 200). " ...";
                print "
-                  <div class='col-9 text-center'>
-                    <img src='".$row['image']."'class='' alt='...'>
-                    <div class='card-body'>
-                     <h5 class='card-title'>" . $row['titre'] . "</h5>
-                     <p class='card-text'>". $exerpt."</p>
-                     <p class='card-text'><small class='text-muted'>". $row['auteur'] . "</small></p>
+                 <div class='container mb-5'>
+                    <div class='row pb-5'>
+                      <div class='col-md-6'>
+                        <img src='".$row['image']."'class='rounded' alt='...'>
+                      </div>
+                      <div class='col-md-6 p-5'>
+                        <h1 class='display-4'>" . $row['titre'] . "</h5>
+                        <p class=''> Posted on ". $row['date'] ." by ". $row['auteur'] ."</p>
+                      </div>
                     </div>
-                  </div>
-
+                    <div class='row'>
+                      <p class='p-2'>". $row['contenu'] ."</p>
+                    </div>
+                 </div>
               ";
             }
           ?>
