@@ -34,11 +34,11 @@
     ?>
   </head>
   <body>
-    <div class="header ">
+    <div class="header">
       <div class="container">
         <div class="row p-5">
           <div class="logo col-auto mr-auto">
-            <a href="#">
+            <a href="./index.php">
               <img src="img/logo.png" alt="">
             </a>
           </div>
