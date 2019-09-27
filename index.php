@@ -197,7 +197,7 @@
               <div class='nocolor col-5 m-4'>
 
                   <span class='purple-bg'>" . $row['tag'] . "</span>
-                  <h2 class='solo1'>". $row['titre']."</h2>
+                  <h2 class='solo1 pt-2'>". $row['titre']."</h2>
                   <p class='solo2'>". $row['contenu'] . "</p>
                   <button type='button' id='gbut' class='btn btn-success'>Buy now $".$row['prix'] . "</button>
 
