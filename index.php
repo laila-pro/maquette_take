@@ -130,20 +130,20 @@
       <h2>A look at details</h2>
       <div class="small_articles row">
         <?php
-          $sql =  'SELECT * FROM `article` ORDER BY `ID_ARTICLE` DESC LIMIT 4';
+          $sql =  'SELECT * FROM `article` ORDER BY `ID_ARTICLE` DESC LIMIT 3';
 
           foreach  ($conn->query($sql) as $row) {
             $exerpt = substr($row['contenu'], 0, 200). " ...";
              print "
-                <div class='card web col-md-3 pt-3' style='width: 18rem;'>
+                <div class='card web col-md-3 pt-3 m-3' style='width: 18rem;'>
                   <a href='article.php?id=" . $row['ID_article'] . "'>
                     <img src='".$row['image']."'class='card-img-top' alt='...'>
+                    <div class='card-body'>
+                     <h5 class='card-title'>" . $row['titre'] . "</h5>
+                     <p class='card-text'>". $exerpt."</p>
+                     <p class='card-text'><small class='text-muted'>". $row['auteur'] . "</small></p>
+                    </div>
                   </a>
-                  <div class='card-body'>
-                   <h5 class='card-title'>" . $row['titre'] . "</h5>
-                   <p class='card-text'>". $exerpt."</p>
-                   <p class='card-text'><small class='text-muted'>". $row['auteur'] . "</small></p>
-                  </div>
                 </div>
 
             ";
@@ -197,7 +197,7 @@
               <div class='nocolor col-5 m-4'>
 
                   <span class='purple-bg'>" . $row['tag'] . "</span>
-                  <h2 class='solo1'>". $row['titre']."</h2>
+                  <h2 class='solo1 pt-3'>". $row['titre']."</h2>
                   <p class='solo2'>". $row['contenu'] . "</p>
                   <button type='button' id='gbut' class='btn btn-success'>Buy now $".$row['prix'] . "</button>
 

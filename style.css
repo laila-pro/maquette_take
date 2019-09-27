@@ -2,6 +2,18 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover
+{
+     color:#00A0C6;
+     text-decoration:none;
+     cursor:pointer;
+}
+
 .header {
   background: url(img/paysage.jpg) no-repeat center center;
   padding: 55px 0 380px;

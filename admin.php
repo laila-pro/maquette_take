@@ -29,7 +29,7 @@
           require 'voyage_add.php';
           break;
           case 0:
-          echo "Article ajouté avec succès";
+          echo "Voyage ajouté avec succès";
           break;
 
           default:

@@ -13,4 +13,5 @@ echo $sql;
 $conn->exec($sql);
 
 echo "New record created successfully";
+        header('Location: admin.php?trip=0'); /* Redirection du navigateur */
 ?>

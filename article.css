@@ -1,0 +1,22 @@
+body{
+    background-image: url(img/paysage_blur.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.article {
+  width:100%;
+  padding: 30px;
+  border: 1px solid #f1f1f1;
+  background:rgba(255,255,255, 0.8);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 1.2rem;
+}
+
+img {
+  width:100%;
+  max-width:500px;
+}
