@@ -52,6 +52,9 @@
               </ul>
             </li>
           </ul>
+          <div class="deco_bouton m-4">
+          <a href="deconnexion.php">Déconnexion</a>
+          </div>
         </nav>
 
       </div>

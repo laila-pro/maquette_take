@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if(!(isset($_SESSION['username'])))
+{
+    header("Location: login.php");
+}
+
+?>
+
 <?php require 'header.php';?>
 <div class="row">
 <div class="col-3">
