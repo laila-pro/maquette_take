@@ -1,26 +1,30 @@
 
 <?php
+require 'header.php';
 if (isset($_GET['id'])){
   require 'connexion.php';
   $sql = 'select * from `article` where `ID_article`='.$_GET["id"];
-    echo $sql;
-      foreach  ($conn->query($sql) as $row) {
-      print_r($row);
+        foreach  ($conn->query($sql) as $row) {
+      // print_r($row);
       ?>
-     <form class='was-validated' action='article_save.php?choix=2' method='post'>
+  <div class="row">
+    <div class="col-3">
+    <?php require 'sidebar.php';?>
+    </div>
+    <div class="col-9">
+     <form class='was-validated' action='article_alter.php' method='post'>
         <div class='col-md-4 mb-3'>
         <label for='validationTooltip01'>Titre Article</label>
-        <input type='text' class='form-control' name='titre'   value='<?= $row['ID_article']; ?>' >
+        <input type='hidden' class='form-control' name='ID'   value='<?= $row['ID_article']; ?>' >
         <input type='text' class='form-control' name='titre'  value='<?= $row['titre']; ?>' >
         </div>
-      </div>
-    <div class='mb-3'>
-      <label for='validationTextarea'>Contenu de l'article</label>
-      <textarea class='form-control is-invalid' id='validationTextarea' placeholder='Required example textarea' name='contenu'  required><?= $row['contenu']; ?></textarea>
-      <div class='invalid-feedback'>
-        Veuillez saisir l'article
-      </div>
-    </div>
+        <div class='mb-3'>
+        <label for='validationTextarea'>Contenu de l'article</label>
+        <textarea class='form-control is-invalid' id='validationTextarea' placeholder='Required example textarea' name='contenu'  required><?= $row['contenu']; ?></textarea>
+        </div>
+        <div class='mb-3 '>
+        <img src="upload/<?= $row['image']; ?>">
+        </div>
       <input type='file'
           class='filepond'
           name='filepond'
@@ -34,7 +38,10 @@ if (isset($_GET['id'])){
       </div>
     </div>
   </form>
+</div>
+</div>
   <?php
   }
 }
+require 'footer.php';
 ?>

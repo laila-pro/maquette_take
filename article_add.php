@@ -1,7 +1,7 @@
 
 
   <h1> Ajouter un article </h1>
-  <form class="was-validated" action="article_save.php?choix=2" method="post">
+  <form class="was-validated" action="article_save.php?choix=2" method="post" enctype='multipart/form-data'>
       <div class="col-md-4 mb-3">
       <label for="validationTooltip01">Titre Article</label>
       <input type="text" class="form-control" name="titre" id="validationTooltip01" placeholder="Titre article" value="" required>
@@ -17,20 +17,6 @@
     </div>
   </div>
 
-  <!-- <div class="form-group">
-    <select class="custom-select" required>
-      <option value="">Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
-    <div class="invalid-feedback">Example invalid custom select feedback</div>
-  </div> -->
-
-  <!-- <div class="custom-file"> -->
-    <!-- <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-    <div class="invalid-feedback">Example invalid custom file feedback</div> -->
     <input type="file"
         class="filepond"
         name="filepond"

@@ -24,7 +24,7 @@
     print "<td>".$row['date'] . "</td>";
     print "<td>".$row['image'] . "</td>";
     echo  '<td><a href="page_article.php?id='.$row['ID_article'].'">',"Modif",' </a></td>';
-echo  '<td><a href="page_article.php?id='.$row['ID_article'].'">',"Supp",' </a></td>';
+echo  '<td><a href="article_delete.php?id='.$row['ID_article'].'">',"Supp",' </a></td>';
      // echo "<td>" "<input class="form-check-input" type="radio" name="modifier" id="exampleRadios1" value="option1" checked>"  "<td>" ;
      echo "</tr>";
 
@@ -34,16 +34,3 @@ echo  '<td><a href="page_article.php?id='.$row['ID_article'].'">',"Supp",' </a><
 
 </tbody>
 </table>
-<!--
-// <i class="fas fa-trash-alt"></i>
-// echo '<div class="col-12 ">';
-//   print $row['titre'];
-//   print  $row['contenu'];
-//   print $row['auteur'];
-//   print $row['contenu'];
-//   print '<input type="button" class="btn btn-primary" value="Editer" href="#">';
-//   print '<input type="button" value="Modifier" href="#">';
-//   print '<input type="button" value="Supprimer" href="#">';
-// echo '</div>';
-}
-// echo '</div>'; -->

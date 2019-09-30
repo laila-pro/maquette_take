@@ -1,12 +1,3 @@
-<?php
-
-session_start();
-if(!(isset($_SESSION['username'])))
-{
-    header("Location: login.php");
-}
-
-?>
 
 <?php require 'header.php';?>
 <div class="row">
@@ -26,10 +17,13 @@ if(!(isset($_SESSION['username'])))
         case 0:
         echo "Article ajouté avec succès";
         break;
+        case 10:
+        echo "Modification enregistrée avec succès";
         case 3:
         require 'article_edit.php';
 
         default:
+        // require 'page_article.php';
         break;
         }
       }else if (isset($_GET['trip'])){
