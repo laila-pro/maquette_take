@@ -5,8 +5,7 @@
 </div>
   <div class="col-9">
     <?php
-    //if (isset($_GET['voir']))
-    // require 'article_add.php';
+    require 'article_edit.php';
     ?>
     <?php
     if (isset($_GET['choix'])) {
