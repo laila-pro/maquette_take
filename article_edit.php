@@ -7,37 +7,36 @@
       <th scope="col">Auteur</th>
       <th scope="col">Date</th>
       <th scope="col">Image</th>
+      <th scope="col">action</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
 <?php
+
     require 'connexion.php';
     $sql="SELECT * FROM `article`";
       foreach  ($conn->query($sql) as $row) {
+        $id=0;
     print "<td>".$row['titre'] . "</td>";
     print  "<td>".$row['contenu'] . "</td>";
     print "<td>".$row['auteur'] . "</td>";
     print "<td>".$row['date'] . "</td>";
     print "<td>".$row['image'] . "</td>";
+    echo  '<td><a href="page_article.php?id='.$row['ID_article'].'">',"Modif",' </a></td>';
+echo  '<td><a href="page_article.php?id='.$row['ID_article'].'">',"Supp",' </a></td>';
      // echo "<td>" "<input class="form-check-input" type="radio" name="modifier" id="exampleRadios1" value="option1" checked>"  "<td>" ;
      echo "</tr>";
 
-   "</tbody>";
   }
 
 ?>
+
+</tbody>
 </table>
-    <!--
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr> -->
-
-<!-- <div class="row d-flex justify-content-around"> -->
-
-
-<!-- // echo '<div class="col-12 ">';
+<!--
+// <i class="fas fa-trash-alt"></i>
+// echo '<div class="col-12 ">';
 //   print $row['titre'];
 //   print  $row['contenu'];
 //   print $row['auteur'];
