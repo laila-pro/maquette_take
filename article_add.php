@@ -1,5 +1,3 @@
-
-
   <h1> Ajouter un article </h1>
   <form class="was-validated" action="article_save.php?choix=2" method="post" enctype='multipart/form-data'>
       <div class="col-md-4 mb-3">

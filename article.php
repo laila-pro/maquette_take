@@ -12,26 +12,6 @@
     <link rel="icon" type="image/png" href="img/logo.png">
     <!--googlefont-->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
-    <!-- Connexion à la base de données -->
-    <?php
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname= "take";
-
-      try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        // echo "Connected successfully";
-        echo "</div>
-        </div>";
-      }
-      catch(PDOException $e){
-        echo "Connection failed: " . $e->getMessage();
-      }
-    ?>
   </head>
   <body>
     <div class="header">
@@ -55,13 +35,14 @@
       <div class="row justify-content-md-center">
         <div class="article col p-5 my-5">
           <?php
+            require 'connexion.php';
             $sql =  'SELECT * FROM `article` WHERE `ID_article`='.$_GET["id"];
             foreach  ($conn->query($sql) as $row) {
                print "
                  <div class='container mb-5'>
                     <div class='row pb-5'>
                       <div class='col-md-6'>
-                        <img src='".$row['image']."'class='rounded' alt='...'>
+                        <img src='upload/".$row['image']."'class='rounded' alt='...'>
                       </div>
                       <div class='col-md-6 p-5'>
                         <h1 class='display-4'>" . $row['titre'] . "</h5>
