@@ -137,7 +137,7 @@
              print "
                 <div class='card web col-md-3 pt-3 m-3' style='width: 18rem;'>
                   <a href='article.php?id=" . $row['ID_article'] . "'>
-                    <img src='".$row['image']."'class='card-img-top' alt='...'>
+                    <img src='upload/".$row['image']."'class='card-img-top' alt='...'>
                     <div class='card-body'>
                      <h5 class='card-title'>" . $row['titre'] . "</h5>
                      <p class='card-text'>". $exerpt."</p>
