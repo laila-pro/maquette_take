@@ -61,8 +61,8 @@
                  <div class='container mb-5'>
                     <div class='row pb-5'>
                       <div class='col-md-6'>
-                        <img src='upload/".$row['image']."' class='rounded' alt='...'>
-                        </div>
+                        <img src='".$row['image']."'class='rounded' alt='...'>
+                      </div>
                       <div class='col-md-6 p-5'>
                         <h1 class='display-4'>" . $row['titre'] . "</h5>
                         <p class=''> Posted on ". $row['date'] ." by ". $row['auteur'] ."</p>

@@ -5,10 +5,9 @@ $tab = array(
   'tag' => $_POST['tag'],
   'prix' => $_POST['prix'],
   'contenu' => $_POST['contenu']
-
 );
 
-$sql = 'INSERT INTO `voyage` (`tag`, `titre`, `contenu`, `prix`, `date`) VALUES ("'.$tab["tag"].'", "'.$tab["titre"].'","'.$tab["contenu"].'","'.$tab["prix"].'", CURDATE());';
+$sql = 'INSERT INTO `voyage` (`tag`, `titre`, `contenu`, `prix`, `date`) VALUES ("'.$tab["tag"].'", "'.$tab["titre"].'","'.$tab["contenu"].'","'.$tab["contenu"].'", CURDATE())';
 
 echo $sql;
 $conn->exec($sql);
