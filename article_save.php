@@ -7,7 +7,7 @@ if ($result) {
     'contenu' => $_POST['contenu'],
     'image'=> $_FILES["filepond"]["name"] );
   //création de la requête SQL:
-  $sql = 'INSERT INTO `article` (`titre`, `contenu`, `image`, `auteur`, `date`) VALUES ("'.$tab["contenu"].'", "'.$tab["titre"].'","'.$tab["image"].'","test",CURDATE());';
+  $sql = 'INSERT INTO `article` (`titre`, `contenu`, `image`, `auteur`, `date`) VALUES ("'.$tab["titre"].'", "'.$tab["contenu"].'","'.$tab["image"].'","'.$tab["auteur"].'",CURDATE());';
   // echo $sql;
   $conn->exec($sql);
     header('Location: admin.php?choix=0');
