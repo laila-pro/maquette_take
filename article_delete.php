@@ -2,10 +2,11 @@
 require 'connexion.php';
 //Modi de la requête SQL:
 
-$sql = 'delete from article
-where ID_article=' .$_GET["id"] ;
+$sql = 'DELETE FROM article WHERE `ID_article`='.$_GET["id"];
+// $deleteuser = "DELETE FROM table2 WHERE first_name = 'Alfred' AND last_name = 'Hitchcock'";
+$conn->exec($sql);
+
 echo "suppression effectuée";
-echo $sql;
-// $conn->exec($sql);
+// echo $sql;
 //     header('Location: admin.php?choix=10');
 ?>
